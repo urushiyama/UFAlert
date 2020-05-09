@@ -11,6 +11,7 @@ import Cocoa
 import UIKit
 #endif
 
+/// User-Friendly Alert with ReactiveX-like simple codes.
 public class UFAlert {
   
   #if os(macOS)
@@ -42,6 +43,11 @@ public class UFAlert {
   
   var actions: [Action]
   
+  /// Initialize UFAlert with specific messages and styles.
+  /// - Parameters:
+  ///   - messageText: A short summary of the error or condition.
+  ///   - informativeText: A complete description of the condition.
+  ///   - alertStyle: A style for presenting the alert.
   public init(messageText: String, informativeText: String? = nil, alertStyle: UFAlertStyle) {
     self.messageText = messageText
     self.informativeText = informativeText
@@ -50,28 +56,55 @@ public class UFAlert {
   }
   
   #if os(macOS)
+  /// Set a confirmation action on the alert.
+  /// - Parameters:
+  ///   - title: A short text representing the response which user can take.
+  ///   - callback: A callback to be executed when user confirms.
+  /// - Returns: UFAlert with the confirmation action assigned.
   public func onConfirm(_ title: String = "OK", callback: @escaping Callback) -> UFAlert {
     self.actions.append(.confirm(title: title, callback: callback))
     return self
   }
   #elseif os(iOS)
+  /// Set a confirmation button on the alert.
+  /// - Parameters:
+  ///   - title: A short text representing the response which user can take.
+  ///   - style: A style of the button.
+  ///   - callback: A callback to be executed when user confirms the alert.
+  /// - Returns: UFAlert with the confirmation button assigned.
   public func onConfirm(_ title: String = "OK", style: UIAlertAction.Style, callback: @escaping Callback) -> UFAlert {
     self.actions.append(.confirm(title: title, style: style, callback: callback))
     return self
   }
   #endif
   
+  /// Set a cancel action on the alert.
+  /// - Parameters:
+  ///   - title: A short text representing the cancel action. This always should be "Cancel" with localized languages.
+  ///   - callback: A callback to be executed when user cancels the alert.
+  /// - Returns: UFAlert with the cancel action assigned.
   public func onCancel(_ title: String = "Cancel", callback: @escaping Callback) -> UFAlert {
     self.actions.append(.cancel(title: title, callback: callback))
     return self
   }
   
   #if os(macOS)
+  /// Set an alternative action on the alert.
+  /// - Parameters:
+  ///   - title: A short text representing the alternative way against the confirmation.
+  ///   - callback: A callback to be executed when user selects the alternative.
+  /// - Returns: UFAlert with the alternative action assigned.
   public func onAlternative(_ title: String, callback: @escaping Callback) -> UFAlert {
     self.actions.append(.alternative(title: title, callback: callback))
     return self
   }
   #elseif os(iOS)
+  /// Set a alternative action on the alert.
+  /// - Parameters:
+  ///   - title: A short text representing the alternative way against the confirmation.
+  ///   - style: A style of the button.
+  ///   - callback: A callback to be executed when user selects the alternative.
+  /// - Returns: UFAlert with the alternative action assigned.
   public func onAlternative(_ title: String, style: UIAlertAction.Style, callback: @escaping Callback) -> UFAlert {
     self.actions.append(.alternative(title: title, style: style, callback: callback))
     return self
@@ -79,6 +112,7 @@ public class UFAlert {
   #endif
   
   #if os(macOS)
+  /// Show the alert.
   public func show() {
     let alert = NSAlert()
     alert.messageText = self.messageText
@@ -107,6 +141,10 @@ public class UFAlert {
     }
   }
   #elseif os(iOS)
+  /// Show the alert on a specific view controller.
+  /// - Parameters:
+  ///   - parentViewController: A view controller above which presents the alert.
+  ///   - completion: A block to be executed after the alert disappears.
   public func show(on parentViewController: UIViewController, completion: (() -> Void)? = nil) {
     var buttons = [(title: String, style: UIAlertAction.Style, callback: Callback)?](repeating: nil, count: 3)
     actions.forEach { action in
