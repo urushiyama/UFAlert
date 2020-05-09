@@ -91,6 +91,8 @@
 		63FDB37D2466B5690004C514 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63FDB37F2466B5690004C514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63FDB3802466B5690004C514 /* UFAlertDemo_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UFAlertDemo_macOS.entitlements; sourceTree = "<group>"; };
+		63FDB3CC2466D3800004C514 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		63FDB3CD2466D62E0004C514 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,8 @@
 		63FDB31D2466984A0004C514 = {
 			isa = PBXGroup;
 			children = (
+				63FDB3CD2466D62E0004C514 /* LICENSE */,
+				63FDB3CC2466D3800004C514 /* README.md */,
 				63FDB3A52466D1C50004C514 /* Sources */,
 				63FDB34E24669C2F0004C514 /* Package.swift */,
 				63FDB3572466A7510004C514 /* UFAlertDemo_iOS */,
