@@ -130,8 +130,8 @@
 		63FDB31D2466984A0004C514 = {
 			isa = PBXGroup;
 			children = (
+				63FDB3A52466D1C50004C514 /* Sources */,
 				63FDB34E24669C2F0004C514 /* Package.swift */,
-				63FDB34C246699370004C514 /* UFAlert */,
 				63FDB3572466A7510004C514 /* UFAlertDemo_iOS */,
 				63FDB3752466B5660004C514 /* UFAlertDemo_macOS */,
 				63FDB32A246698700004C514 /* Products */,
@@ -192,6 +192,14 @@
 				63FDB3802466B5690004C514 /* UFAlertDemo_macOS.entitlements */,
 			);
 			path = UFAlertDemo_macOS;
+			sourceTree = "<group>";
+		};
+		63FDB3A52466D1C50004C514 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				63FDB34C246699370004C514 /* UFAlert */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -521,7 +529,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/UFAlert/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/UFAlert/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -595,7 +603,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/UFAlert/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/UFAlert/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -676,7 +684,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/UFAlert/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/UFAlert/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -750,7 +758,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/UFAlert/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/UFAlert/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
