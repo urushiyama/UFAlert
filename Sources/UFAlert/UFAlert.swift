@@ -167,6 +167,7 @@ public class UFAlert {
       guard let button = button else { break }
       alert.addAction(UIAlertAction(title: button.title, style: button.style, handler: button.callback))
     }
+    alert.pruneNegativeWidthConstraints()
     parentViewController.present(alert, animated: true, completion: completion)
   }
   #endif

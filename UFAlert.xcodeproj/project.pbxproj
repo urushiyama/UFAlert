@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63EEB95A2480C34600F145D8 /* UIAlertController+PruneInternalNegativeConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EEB9582480C27D00F145D8 /* UIAlertController+PruneInternalNegativeConstraints.swift */; };
 		63FDB33B246698910004C514 /* UFAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FDB339246698910004C514 /* UFAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63FDB34D24669B8B0004C514 /* UFAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FDB339246698910004C514 /* UFAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63FDB35024669EEB0004C514 /* UFAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FDB34F24669EEB0004C514 /* UFAlert.swift */; };
@@ -70,6 +71,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		63EEB9582480C27D00F145D8 /* UIAlertController+PruneInternalNegativeConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+PruneInternalNegativeConstraints.swift"; sourceTree = "<group>"; };
 		63FDB337246698910004C514 /* UFAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UFAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63FDB339246698910004C514 /* UFAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UFAlert.h; sourceTree = "<group>"; };
 		63FDB33A246698910004C514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			children = (
 				63FDB339246698910004C514 /* UFAlert.h */,
 				63FDB34F24669EEB0004C514 /* UFAlert.swift */,
+				63EEB9582480C27D00F145D8 /* UIAlertController+PruneInternalNegativeConstraints.swift */,
 				63FDB33A246698910004C514 /* Info.plist */,
 			);
 			path = UFAlert;
@@ -388,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63EEB95A2480C34600F145D8 /* UIAlertController+PruneInternalNegativeConstraints.swift in Sources */,
 				63FDB35024669EEB0004C514 /* UFAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
