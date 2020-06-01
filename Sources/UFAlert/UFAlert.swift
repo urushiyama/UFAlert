@@ -145,7 +145,7 @@ public class UFAlert {
   /// - Parameters:
   ///   - parentViewController: A view controller above which presents the alert.
   ///   - completion: A block to be executed after the alert disappears.
-  public func show(on parentViewController: UIViewController, completion: (() -> Void)? = nil) {
+  public func show(on parentViewController: UIViewController? = nil, completion: (() -> Void)? = nil) {
     var buttons = [(title: String, style: UIAlertAction.Style, callback: Callback)?](repeating: nil, count: 3)
     actions.forEach { action in
       switch action {
@@ -168,7 +168,11 @@ public class UFAlert {
       alert.addAction(UIAlertAction(title: button.title, style: button.style, handler: button.callback))
     }
     alert.pruneNegativeWidthConstraints()
-    parentViewController.present(alert, animated: true, completion: completion)
+    if let parentViewController = parentViewController {
+      parentViewController.present(alert, animated: true, completion: completion)
+    } else if let rootViewController = UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.rootViewController {
+      rootViewController.present(alert, animated: true, completion: completion)
+    }
   }
   #endif
 }

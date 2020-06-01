@@ -35,7 +35,7 @@ UFAlert(messageText: "Simple Comfirmation", alertStyle: .alert)
   .onConfirm(style: .default) {_ in
     print("OK")
   }
-  .show(on: someViewController)
+  .show()
 ```
 
 - Show destructive choices:
@@ -48,7 +48,7 @@ UFAlert(messageText: "Destructive Choices", informativeText: "To be, or not to b
   .onCancel("Cancel") { _ in
     print("Cancel")
   }
-  .show(on: self)
+  .show()
 ```
 
 - Show choices with alternative action:
@@ -64,7 +64,7 @@ UFAlert(messageText: "Choice has an alternative", alertStyle: .alert)
   .onCancel("Cancel") { _ in
     print("Cancel")
   }
-  .show(on: self)
+  .show(on: someViewController) // maybe useful on iPad 🤔
 ```
 
 ### macOS

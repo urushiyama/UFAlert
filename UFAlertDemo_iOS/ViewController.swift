@@ -20,7 +20,7 @@ class ViewController: UIViewController {
       .onConfirm(style: .default) {_ in
         print("OK")
       }
-      .show(on: self)
+      .show()
   }
   
   @IBAction func doDestructiveChoices(_ sender: Any) {
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     .onCancel("Cancel") { _ in
       print("Cancel")
     }
-    .show(on: self)
+    .show()
   }
   
   @IBAction func doChooseWithAlternative(_ sender: Any) {
@@ -45,6 +45,6 @@ class ViewController: UIViewController {
     .onCancel("Cancel") { _ in
       print("Cancel")
     }
-    .show(on: self)
+    .show()
   }
 }
